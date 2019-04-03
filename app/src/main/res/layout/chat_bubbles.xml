@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view_chat_bubble_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_corners_user"
+        android:gravity="start"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:textAlignment="textStart"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_view_chat_bubble_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rounded_corners_other_user"
+        android:gravity="end"
+        android:paddingBottom="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:textAlignment="textEnd"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/vrijeme_lijevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_chat_bubble_left"
+        android:paddingBottom="3dp"
+        android:text="TextView"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/vrijeme_desno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/text_view_chat_bubble_right"
+        android:paddingBottom="3dp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/slika_lijevo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/vrijeme_lijevo"
+        android:layout_marginTop="5dp"
+        android:scaleType="center"
+        android:visibility="gone"
+        app:srcCompat="@drawable/placeholder_image" />
+
+    <ImageView
+        android:id="@+id/slika_desno"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/vrijeme_desno"
+        android:layout_marginTop="5dp"
+        android:scaleType="center"
+        android:visibility="gone"
+        app:srcCompat="@drawable/placeholder_image" />
+
+</RelativeLayout>
+

@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/GlavnaBoja</item>
+        <item name="colorPrimaryDark">@color/GlavnaBojaTamnija</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@android:transition/slide_right</item>
+        <item name="android:windowExitTransition">@android:transition/slide_left  </item>
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">@transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_image_transform</item>
+    </style>
+
+    <style name="MaterialBaseBaseTheme" parent="MaterialDrawerTheme.Light.DarkToolbar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/GlavnaBoja</item>
+        <item name="colorPrimaryDark">@color/GlavnaBojaTamnija</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:actionMenuTextColor">@color/GlavnaBoja</item>
+        <!--<item name="toolbarStyle">@color/GlavnaBoja</item>-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="spinnerTheme">
+        <item name="android:textColor">@color/SpinnerTextColor</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">textEnd</item>
+    </style>
+
+</resources>

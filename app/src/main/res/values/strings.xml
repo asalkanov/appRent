@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Najam stanova</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_lista_stanova_mapa">Map</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string name="brojSoba_prompt">Odaberite broj soba:</string>
+    <string-array name="broj_soba">
+        <item>Bez soba</item>
+        <item>Jednosoban</item>
+        <item>Dvosoban</item>
+        <item>Trosoban</item>
+        <item>Četverosoban</item>
+        <item>Peterosoban</item>
+    </string-array>
+
+    <string name="brojKupaonica_prompt">Odaberite broj kupaonica:</string>
+    <string-array name="broj_kupaonica">
+        <item>Bez kupaonica</item>
+        <item>Jedna kupaonica</item>
+        <item>Dvije kupaonice</item>
+        <item>Tri kupaonice</item>
+    </string-array>
+
+</resources>

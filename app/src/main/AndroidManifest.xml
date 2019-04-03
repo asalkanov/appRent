@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.johndoe.najamstanova">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Set custom default icon. This is used when no icon is set for incoming notification messages. See README(https://goo.gl/l4GJaQ) for more. -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/home_notif" />
+    <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming notification message. See README(https://goo.gl/6BKBk7) for more. -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/GlavnaBoja" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".MapsActivity" />
+        <activity android:name=".PrikazSlikaUpload" />
+        <activity
+            android:name=".ListaStanova"
+            android:theme="@style/MaterialBaseBaseTheme" />
+        <activity android:name=".UploadImages" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource. (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".OdabirSlika"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" /> <!-- da se dodane slike ne pobrišu nakon rotacije uređaja -->
+        <activity android:name=".Registracija" />
+        <activity android:name=".CropImages" />
+        <activity android:name=".PrivateChat" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
+        <!-- android:theme="@style/Base.Theme.AppCompat"/>    optional (needed if default theme has no action bar) -->
+        <activity android:name=".DodavanjeStanova" />
+        <activity android:name=".ChatUsersList" />
+        <activity android:name=".SazetakInformacija" />
+        <activity
+            android:name=".DetaljiStanova"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name=".ListaStanovaMapa"
+            android:label="@string/title_activity_lista_stanova_mapa" />
+        <activity
+            android:name=".StanoviVlasnika"
+            android:theme="@style/MaterialBaseBaseTheme" />
+        <activity android:name=".SortAndFilterPostavke" />
+        <activity android:name=".MapsOdabirLokacijePretrage" />
+        <activity
+            android:name=".LajkaniStanovi"
+            android:theme="@style/MaterialBaseBaseTheme" />
+        <activity android:name=".StanoviLiked" />
+        <activity android:name=".IzmijeniStan"></activity>
+    </application>
+
+</manifest>

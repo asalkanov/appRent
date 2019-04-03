@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/sevZajedno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cijenaCL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/Cijena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Raspon cijena:"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <!--
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinnerNizaCijena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/odCijena"
+                    app:layout_constraintStart_toEndOf="@+id/odCijena" />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spinnerVisaCijena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/odCijena"
+                    app:layout_constraintEnd_toEndOf="parent" />
+                    -->
+
+
+                <!--
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/cijena_od_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Niža cijena: "
+                    android:visibility="gone"
+                    app:arrowDrawable="@drawable/arrow_down"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/odCijena"
+                    app:layout_constraintStart_toEndOf="@+id/odCijena"
+                    app:textTint="#000000" />
+
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/cijena_do_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:text="Viša cijena:"
+                    android:visibility="gone"
+                    app:arrowDrawable="@drawable/arrow_down"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/doCijena"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:textTint="#000000" />
+                    -->
+
+                <TextView
+                    android:id="@+id/odCijena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Od:"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cijena" />
+
+                <TextView
+                    android:id="@+id/doCijena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Do:"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/Cijena"
+                    tools:layout_editor_absoluteX="158dp" />
+
+                <Button
+                    android:id="@+id/spremiPostavke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/GlavnaBoja"
+                    android:clickable="true"
+                    android:elevation="0dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="Spremi"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/doCijena" />
+
+                <!--
+                <Spinner
+                    android:id="@+id/spinnerNizaCijena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintStart_toEndOf="@+id/odCijena"
+                    app:layout_constraintTop_toBottomOf="@+id/Cijena" />
+
+                <Spinner
+                    android:id="@+id/spinnerVisaCijena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Cijena" />
+                    -->
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/lokacija"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/cijenaCL">
+
+                <TextView
+                    android:id="@+id/lokacijaTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Lokacija:"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Odaber"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lokacijaTV" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
